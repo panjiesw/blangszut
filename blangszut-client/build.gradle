@@ -1,0 +1,18 @@
+springBoot {
+	mainClass = 'com.panjiesw.blangszut.BlangszutMain'
+}
+
+dependencies {
+	compile project(':blangszut-service')
+
+	compile('org.springframework.boot:spring-boot-starter-web') {
+		exclude module: 'spring-boot-starter-tomcat'
+	}
+	compile 'org.springframework.boot:spring-boot-starter-jetty'
+	compile 'org.springframework.boot:spring-boot-starter-actuator'
+	compile 'org.springframework.boot:spring-boot-starter-security'
+	compile 'org.springframework.security:spring-security-acl'
+	compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
