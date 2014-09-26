@@ -1,0 +1,4 @@
+rootProject.name = 'blangszut'
+
+include 'blangszut-service','blangszut-client','blangszut-data'
+

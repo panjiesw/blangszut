@@ -1,0 +1,35 @@
+def vJavaLang = '1.8'
+def projects = [ project(':blangszut-client'), project(':blangszut-data'), project(':blangszut-service') ]
+
+wrapper.gradleVersion = '2.1'
+
+buildscript {
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.1.6.RELEASE'
+	}
+}
+
+configure(allprojects) {
+	apply plugin: 'eclipse'
+	apply plugin: 'idea'
+}
+
+configure(projects) {
+	apply plugin: 'java'
+
+	targetCompatibility = vJavaLang
+	sourceCompatibility = vJavaLang
+
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+
+	dependencies {
+		versionManagement 'io.spring.platform:platform-versions:1.0.2.RELEASE@properties'
+	}
+}
