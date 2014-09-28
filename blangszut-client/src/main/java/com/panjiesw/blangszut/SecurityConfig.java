@@ -15,7 +15,8 @@ class SecurityConfig {
 		@Override
 		protected void configure(HttpSecurity http) throws Exception {
 			http.authorizeRequests()
-				.antMatchers("/static/**", "/login").permitAll();
+				.antMatchers("/partials/**", "/lib/**", "/login").permitAll()
+				.anyRequest().authenticated();
 		}
 	}
 }

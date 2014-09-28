@@ -14,7 +14,6 @@
 hs_err_pid*
 
 build
-dist
 
 # Gradle
 .gradle
@@ -25,8 +24,6 @@ dist
 *.ipr
 *.iws
 
-node_modules
-bower_components
 *.log
 
 blangszut-client/client
