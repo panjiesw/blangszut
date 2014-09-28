@@ -1,0 +1,19 @@
+dependencies {
+	compile 'org.springframework:spring-context'
+	compile 'org.springframework:spring-web'
+	compile 'org.springframework:spring-webmvc'
+	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// datasource and connection pool dependencies
+	compile 'org.postgresql:postgresql:9.3-1102-jdbc4'
+	compile 'com.h2database:h2'
+	compile 'org.apache.tomcat:tomcat-jdbc'
+
+	// for use in on-the-fly database setup and migrations
+	compile 'org.flywaydb:flyway-core'
+	compile 'joda-time:joda-time'
+	compile 'org.hibernate:hibernate-validator'
+
+	// for use of spring-test's MatcherAssertionErrors.*
+	testCompile 'org.springframework:spring-test'
+}

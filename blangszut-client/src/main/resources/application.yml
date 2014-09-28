@@ -1,0 +1,21 @@
+spring:
+  profiles.active: default
+  main:
+    sources: com.panjiesw.blangszut.BlangszutMain
+security:
+  user:
+    password: admin
+
+---
+
+spring:
+  profiles: default,staging,production
+
+---
+
+spring:
+  profiles: default
+  thymeleaf:
+    cache: false
+
+---

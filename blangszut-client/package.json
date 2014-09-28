@@ -1,5 +1,10 @@
 {
-    "name": "blangszut",
-    "version": "0.0.1",
-    "description": "A project for learning Spring stack."
+  "name": "blangszut",
+  "version": "0.0.1",
+  "description": "A project for learning Spring stack.",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-load-plugins": "^0.6.0",
+    "gulp-util": "^3.0.1"
+  }
 }

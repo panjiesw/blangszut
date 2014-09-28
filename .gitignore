@@ -16,6 +16,10 @@ hs_err_pid*
 build
 dist
 
+# Gradle
+.gradle
+/build
+
 .idea
 *.iml
 *.ipr
@@ -24,3 +28,5 @@ dist
 node_modules
 bower_components
 *.log
+
+blangszut-client/client

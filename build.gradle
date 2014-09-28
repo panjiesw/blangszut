@@ -1,5 +1,5 @@
 def vJavaLang = '1.8'
-def projects = [ project(':blangszut-client'), project(':blangszut-data'), project(':blangszut-service') ]
+def projects = [ project(':blangszut-client'), project(':blangszut-common'), project(':blangszut-service') ]
 
 wrapper.gradleVersion = '2.1'
 
@@ -10,6 +10,7 @@ buildscript {
 	}
 	dependencies {
 		classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.1.6.RELEASE'
+		classpath 'org.springframework:springloaded:1.2.0.RELEASE'
 	}
 }
 
@@ -20,6 +21,7 @@ configure(allprojects) {
 
 configure(projects) {
 	apply plugin: 'java'
+    apply plugin: 'spring-boot'
 
 	targetCompatibility = vJavaLang
 	sourceCompatibility = vJavaLang
