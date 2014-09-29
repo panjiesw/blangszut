@@ -18,7 +18,7 @@ class SecurityConfig {
 				.antMatchers("/partials/**", "/lib/**").permitAll()
 				.antMatchers("/", "/admin/**", "/login").permitAll()
 				.anyRequest().authenticated()
-				.and().formLogin().and().httpBasic();
+				.and().formLogin().loginPage("/login").permitAll();
 		}
 	}
 }
