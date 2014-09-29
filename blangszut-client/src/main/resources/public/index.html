@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html ng-controller="AppController">
 <head lang="en">
   <meta charset="UTF-8">
-  <title ng-bind-template="Blangszut {{root.sep + root.title}}"></title>
+  <title ng-bind-template="Blangszut {{root.sep + root.title}}">Blangszut</title>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css"/>
+
+  <!--<script src="/lib/jquery/dist/jquery.js"></script>-->
+  <script data-main="js/main.js" src="/lib/requirejs/require.js"></script>
 </head>
 <body>
-  <h1>Hello Static</h1>
+  <ui-view></ui-view>
 </body>
 </html>

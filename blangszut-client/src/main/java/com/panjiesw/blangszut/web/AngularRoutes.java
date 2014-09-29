@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AngularRoutes {
 
 	@RequestMapping({
-		"/login"
+		"/login",
+		"/admin"
 	})
 	public String index() {
 		return "forward:/index.html";

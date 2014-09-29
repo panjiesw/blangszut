@@ -1,4 +1,5 @@
 client/lib
+client/css
 node_modules
 npm-debug.log
 dist/
