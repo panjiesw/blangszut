@@ -66,10 +66,13 @@ public class JWTAuthenticationFilter extends GenericFilterBean {
 				}
 			} catch (ParseException e) {
 				logger.error("Error parsing JWT", e);
+				throw new RuntimeException(e);
 			} catch (JOSEException e) {
 				logger.error("Error verifying JWT", e);
+				throw new RuntimeException(e);
 			}
 		}
+		chain.doFilter(request, response);
 	}
 
 	private HttpServletRequest getAsHttpRequest(ServletRequest request) {

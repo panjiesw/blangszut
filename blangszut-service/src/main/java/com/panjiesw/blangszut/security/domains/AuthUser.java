@@ -25,6 +25,10 @@ public class AuthUser implements UserDetails {
 		authorities = user.getRoleList().stream().map(r -> new Authority(r.getName())).collect(Collectors.toList());
 	}
 
+	public static AuthUser fromUser(User user) {
+		return new AuthUser(user);
+	}
+
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return authorities;

@@ -2,6 +2,13 @@ springBoot {
 	mainClass = 'com.panjiesw.blangszut.BlangszutMain'
 }
 
+applicationDefaultJvmArgs = [
+		// Set SAGAN_HOME env variable to the root of sagan project. This allows to register an additional
+		// resource handler location and serve static resources directly from the sagan-client module during dev.
+		// See sagan.ClientResourcesConfig
+		"-DBLANGSZUT_HOME=/${rootProject.rootDir}"
+]
+
 dependencies {
 	compile project(':blangszut-common')
 	compile project(':blangszut-service')

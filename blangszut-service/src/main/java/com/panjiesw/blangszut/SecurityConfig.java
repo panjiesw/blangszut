@@ -26,10 +26,10 @@ import java.io.IOException;
 @Configuration
 public class SecurityConfig {
 
-	@Bean
-	UserDetailsService authService() {
-		return new AuthenticationService();
-	}
+//	@Bean
+//	UserDetailsService authService() {
+//		return new AuthenticationService();
+//	}
 
 	@Bean
 	PasswordEncoder passwordEncoder() {
@@ -45,6 +45,9 @@ public class SecurityConfig {
 @SuppressWarnings("SpringJavaAutowiringInspection")
 @Configuration
 class BlangszutSecurityConfigurer extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	UserDetailsService authService;
 
 	@Autowired
 	PasswordEncoder passwordEncoder;
@@ -73,7 +76,7 @@ class BlangszutSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(userDetailsServiceBean())
+		auth.userDetailsService(authService)
 			.passwordEncoder(passwordEncoder);
 	}
 
